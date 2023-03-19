@@ -1,0 +1,290 @@
+﻿
+namespace Omnitecapp.ViewApp.Reportes
+{
+    partial class frmReproduccion
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReproduccion));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panelsuperior = new Guna.UI.WinForms.GunaGradientPanel();
+            this.lbltituloform = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.cmbmes = new Guna.UI.WinForms.GunaComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvprod = new Guna.UI.WinForms.GunaDataGridView();
+            this.cmbano = new Guna.UI.WinForms.GunaComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnexportaexcel = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.panelsuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvprod)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panelsuperior
+            // 
+            this.panelsuperior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelsuperior.BackgroundImage")));
+            this.panelsuperior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelsuperior.Controls.Add(this.lbltituloform);
+            this.panelsuperior.Controls.Add(this.btnCerrar);
+            this.panelsuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelsuperior.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelsuperior.GradientColor2 = System.Drawing.Color.Gray;
+            this.panelsuperior.GradientColor3 = System.Drawing.Color.Silver;
+            this.panelsuperior.GradientColor4 = System.Drawing.Color.White;
+            this.panelsuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelsuperior.Name = "panelsuperior";
+            this.panelsuperior.Size = new System.Drawing.Size(800, 29);
+            this.panelsuperior.TabIndex = 21;
+            this.panelsuperior.Text = "gunaGradientPanel1";
+            // 
+            // lbltituloform
+            // 
+            this.lbltituloform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lbltituloform.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbltituloform.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbltituloform.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltituloform.Location = new System.Drawing.Point(0, 0);
+            this.lbltituloform.Name = "lbltituloform";
+            this.lbltituloform.Size = new System.Drawing.Size(311, 30);
+            this.lbltituloform.TabIndex = 28;
+            this.lbltituloform.Text = "MI PERFIL";
+            this.lbltituloform.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.Gray;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = global::Omnitecapp.Properties.Resources.Close;
+            this.btnCerrar.Location = new System.Drawing.Point(762, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(38, 29);
+            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // cmbmes
+            // 
+            this.cmbmes.BackColor = System.Drawing.Color.Transparent;
+            this.cmbmes.BaseColor = System.Drawing.Color.White;
+            this.cmbmes.BorderColor = System.Drawing.Color.Silver;
+            this.cmbmes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbmes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbmes.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbmes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbmes.ForeColor = System.Drawing.Color.Black;
+            this.cmbmes.FormattingEnabled = true;
+            this.cmbmes.Location = new System.Drawing.Point(174, 62);
+            this.cmbmes.Name = "cmbmes";
+            this.cmbmes.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbmes.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbmes.Size = new System.Drawing.Size(121, 26);
+            this.cmbmes.TabIndex = 120;
+            this.cmbmes.SelectedIndexChanged += new System.EventHandler(this.cmbmes_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(171, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.TabIndex = 119;
+            this.label2.Text = "MES";
+            // 
+            // dgvprod
+            // 
+            this.dgvprod.AllowUserToAddRows = false;
+            this.dgvprod.AllowUserToDeleteRows = false;
+            this.dgvprod.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvprod.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvprod.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvprod.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvprod.BackgroundColor = System.Drawing.Color.White;
+            this.dgvprod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvprod.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvprod.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvprod.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvprod.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvprod.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvprod.EnableHeadersVisualStyles = false;
+            this.dgvprod.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(224)))), ((int)(((byte)(216)))));
+            this.dgvprod.Location = new System.Drawing.Point(15, 94);
+            this.dgvprod.Name = "dgvprod";
+            this.dgvprod.ReadOnly = true;
+            this.dgvprod.RowHeadersVisible = false;
+            this.dgvprod.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvprod.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvprod.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvprod.RowTemplate.ReadOnly = true;
+            this.dgvprod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvprod.Size = new System.Drawing.Size(773, 314);
+            this.dgvprod.TabIndex = 118;
+            this.dgvprod.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.GreenSea;
+            this.dgvprod.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
+            this.dgvprod.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvprod.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvprod.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvprod.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvprod.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvprod.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(224)))), ((int)(((byte)(216)))));
+            this.dgvprod.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
+            this.dgvprod.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvprod.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvprod.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvprod.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvprod.ThemeStyle.HeaderStyle.Height = 25;
+            this.dgvprod.ThemeStyle.ReadOnly = true;
+            this.dgvprod.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
+            this.dgvprod.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvprod.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgvprod.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvprod.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvprod.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
+            this.dgvprod.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // cmbano
+            // 
+            this.cmbano.BackColor = System.Drawing.Color.Transparent;
+            this.cmbano.BaseColor = System.Drawing.Color.White;
+            this.cmbano.BorderColor = System.Drawing.Color.Silver;
+            this.cmbano.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbano.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbano.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbano.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbano.ForeColor = System.Drawing.Color.Black;
+            this.cmbano.FormattingEnabled = true;
+            this.cmbano.Location = new System.Drawing.Point(15, 62);
+            this.cmbano.Name = "cmbano";
+            this.cmbano.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbano.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbano.Size = new System.Drawing.Size(121, 26);
+            this.cmbano.TabIndex = 117;
+            this.cmbano.SelectedIndexChanged += new System.EventHandler(this.cmbano_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.TabIndex = 116;
+            this.label1.Text = "AÑO";
+            // 
+            // btnexportaexcel
+            // 
+            this.btnexportaexcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnexportaexcel.AnimationHoverSpeed = 0.07F;
+            this.btnexportaexcel.AnimationSpeed = 0.03F;
+            this.btnexportaexcel.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnexportaexcel.BorderColor = System.Drawing.Color.Black;
+            this.btnexportaexcel.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnexportaexcel.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnexportaexcel.CheckedForeColor = System.Drawing.Color.White;
+            this.btnexportaexcel.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnexportaexcel.CheckedImage")));
+            this.btnexportaexcel.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnexportaexcel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnexportaexcel.FocusedColor = System.Drawing.Color.Empty;
+            this.btnexportaexcel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnexportaexcel.ForeColor = System.Drawing.Color.White;
+            this.btnexportaexcel.Image = global::Omnitecapp.Properties.Resources.excel;
+            this.btnexportaexcel.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnexportaexcel.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnexportaexcel.Location = new System.Drawing.Point(702, 42);
+            this.btnexportaexcel.Name = "btnexportaexcel";
+            this.btnexportaexcel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnexportaexcel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnexportaexcel.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnexportaexcel.OnHoverImage = null;
+            this.btnexportaexcel.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnexportaexcel.OnPressedColor = System.Drawing.Color.Black;
+            this.btnexportaexcel.Size = new System.Drawing.Size(86, 42);
+            this.btnexportaexcel.TabIndex = 121;
+            this.btnexportaexcel.Text = "EXCEL";
+            this.btnexportaexcel.Click += new System.EventHandler(this.btnexportaexcel_Click);
+            // 
+            // frmReproduccion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnexportaexcel);
+            this.Controls.Add(this.cmbmes);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvprod);
+            this.Controls.Add(this.cmbano);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelsuperior);
+            this.Name = "frmReproduccion";
+            this.Text = "frmReproduccion";
+            this.Load += new System.EventHandler(this.frmReproduccion_Load);
+            this.panelsuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvprod)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private Guna.UI.WinForms.GunaGradientPanel panelsuperior;
+        public System.Windows.Forms.Label lbltituloform;
+        private System.Windows.Forms.Button btnCerrar;
+        private Guna.UI.WinForms.GunaComboBox cmbmes;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaDataGridView dgvprod;
+        private Guna.UI.WinForms.GunaComboBox cmbano;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaAdvenceButton btnexportaexcel;
+    }
+}

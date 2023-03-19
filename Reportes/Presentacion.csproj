@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B889EAC-7FE3-4CD1-8FE2-DDF0AB438AC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Omnitecapp</RootNamespace>
+    <AssemblyName>OmnitecApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_pafsa.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Omnitecapp.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Downloads\Guna UI Framework Ultimate 2.0.0.1\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 2.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Downloads\Guna UI Framework Ultimate 2.0.0.1\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 2.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net40\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.1\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.5.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.5.0\lib\netstandard2.0\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportdesign\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportdesign\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\frmptranalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\frmptranalisis.Designer.cs">
+      <DependentUpon>frmptranalisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\frmrepordabiertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\frmrepordabiertas.Designer.cs">
+      <DependentUpon>frmrepordabiertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Usercontrol\BtnPosRack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\BtnPosRack.Designer.cs">
+      <DependentUpon>BtnPosRack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\btnubicarenrack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\btnubicarenrack.Designer.cs">
+      <DependentUpon>btnubicarenrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\Buttonubic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\Buttonubic.designer.cs">
+      <DependentUpon>Buttonubic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\ItemAnalisis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\ItemAnalisis.Designer.cs">
+      <DependentUpon>ItemAnalisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\PBubicH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\PBubicH.designer.cs">
+      <DependentUpon>PBubicH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\PBubicV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\PBubicV.designer.cs">
+      <DependentUpon>PBubicV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\PosRackRefrigerado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\PosRackRefrigerado.Designer.cs">
+      <DependentUpon>PosRackRefrigerado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\rackpasillo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\rackpasillo.Designer.cs">
+      <DependentUpon>rackpasillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\UserControl_RackPasilloHorizontal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\UserControl_RackPasilloHorizontal.designer.cs">
+      <DependentUpon>UserControl_RackPasilloHorizontal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrol\vistaubicacionesreservadas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\vistaubicacionesreservadas.Designer.cs">
+      <DependentUpon>vistaubicacionesreservadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministracionclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministracionclientes.Designer.cs">
+      <DependentUpon>frmadministracionclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministracioncosechasygranos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministracioncosechasygranos.Designer.cs">
+      <DependentUpon>frmadministracioncosechasygranos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministraciondepositos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministraciondepositos.Designer.cs">
+      <DependentUpon>frmadministraciondepositos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministracionusuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmadministracionusuarios.Designer.cs">
+      <DependentUpon>frmadministracionusuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijodeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijodeposito.Designer.cs">
+      <DependentUpon>frmhijodeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijoetiquetaubicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijoetiquetaubicaciones.Designer.cs">
+      <DependentUpon>frmhijoetiquetaubicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijolistaubicacionesreservadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijolistaubicacionesreservadas.Designer.cs">
+      <DependentUpon>frmhijolistaubicacionesreservadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijoubicacionesdeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmhijoubicacionesdeposito.Designer.cs">
+      <DependentUpon>frmhijoubicacionesdeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmiperfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmiperfil.Designer.cs">
+      <DependentUpon>frmiperfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmmodificapassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmmodificapassword.Designer.cs">
+      <DependentUpon>frmmodificapassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmptretiquetasubicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Administracion\frmptretiquetasubicaciones.Designer.cs">
+      <DependentUpon>frmptretiquetasubicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmBienvenida.Designer.cs">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmlogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmlogo.Designer.cs">
+      <DependentUpon>frmlogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmMenuapp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmMenuapp.Designer.cs">
+      <DependentUpon>frmMenuapp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmMenuConfiguracionapp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmMenuConfiguracionapp.Designer.cs">
+      <DependentUpon>frmMenuConfiguracionapp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmSubmenuAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmSubmenuAdministracion.Designer.cs">
+      <DependentUpon>frmSubmenuAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmSubmenuOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmSubmenuOperaciones.Designer.cs">
+      <DependentUpon>frmSubmenuOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmSubmenuReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Menues\frmSubmenuReportes.Designer.cs">
+      <DependentUpon>frmSubmenuReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmadministrarordenesabiertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmadministrarordenesabiertas.Designer.cs">
+      <DependentUpon>frmadministrarordenesabiertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmanalisisorden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmanalisisorden.Designer.cs">
+      <DependentUpon>frmanalisisorden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmasignarubicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmasignarubicacion.designer.cs">
+      <DependentUpon>frmasignarubicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmasignarubicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmasignarubicaciones.Designer.cs">
+      <DependentUpon>frmasignarubicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmasociarlotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmasociarlotes.Designer.cs">
+      <DependentUpon>frmasociarlotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmconsultarordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmconsultarordenes.Designer.cs">
+      <DependentUpon>frmconsultarordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmdepcrudo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmdepcrudo.Designer.cs">
+      <DependentUpon>frmdepcrudo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmdepingrefrigerado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmdepingrefrigerado.Designer.cs">
+      <DependentUpon>frmdepingrefrigerado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmdeprefrigerado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmdeprefrigerado.Designer.cs">
+      <DependentUpon>frmdeprefrigerado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmorden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmorden.Designer.cs">
+      <DependentUpon>frmorden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmordendeproduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmordendeproduccion.Designer.cs">
+      <DependentUpon>frmordendeproduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmordendespachodevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmordendespachodevolucion.Designer.cs">
+      <DependentUpon>frmordendespachodevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmordenrecepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmordenrecepcion.Designer.cs">
+      <DependentUpon>frmordenrecepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmprocesarproductosasociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmprocesarproductosasociados.Designer.cs">
+      <DependentUpon>frmprocesarproductosasociados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmproductosorden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmproductosorden.Designer.cs">
+      <DependentUpon>frmproductosorden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptretiquetasproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptretiquetasproductos.Designer.cs">
+      <DependentUpon>frmptretiquetasproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptrf020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptrf020.Designer.cs">
+      <DependentUpon>frmptrf020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptrf025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptrf025.Designer.cs">
+      <DependentUpon>frmptrf025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptrorden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Ordenes\frmptrorden.Designer.cs">
+      <DependentUpon>frmptrorden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmconsultaubicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmconsultaubicacion.designer.cs">
+      <DependentUpon>frmconsultaubicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmconsultaubicacionrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmconsultaubicacionrack.Designer.cs">
+      <DependentUpon>frmconsultaubicacionrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepdespachos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepdespachos.Designer.cs">
+      <DependentUpon>frmRepdespachos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmReprocesado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmReprocesado.Designer.cs">
+      <DependentUpon>frmReprocesado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmReprecepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmReprecepcion.Designer.cs">
+      <DependentUpon>frmReprecepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmReproduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmReproduccion.Designer.cs">
+      <DependentUpon>frmReproduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepStatusDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepStatusDep.Designer.cs">
+      <DependentUpon>frmRepStatusDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepOcupacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepOcupacion.Designer.cs">
+      <DependentUpon>frmRepOcupacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepStock.designer.cs">
+      <DependentUpon>frmRepStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepStockClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\Reportes\frmRepStockClientes.Designer.cs">
+      <DependentUpon>frmRepStockClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatosomnitec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatosomnitec.Designer.cs">
+      <DependentUpon>frmconfiguraraccesobasededatosomnitec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatospulse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatospulse.Designer.cs">
+      <DependentUpon>frmconfiguraraccesobasededatospulse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfigurarservidorweb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfigurarservidorweb.Designer.cs">
+      <DependentUpon>frmconfigurarservidorweb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmusuarioadministradorapp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmusuarioadministradorapp.Designer.cs">
+      <DependentUpon>frmusuarioadministradorapp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportdesign\ReportListadoOrdenesAbiertas.rdlc" />
+    <EmbeddedResource Include="Reportdesign\Reportorden.rdlc" />
+    <EmbeddedResource Include="Reportdesign\Report_analisis.rdlc" />
+    <EmbeddedResource Include="Reportdesign\Report_f020.rdlc" />
+    <EmbeddedResource Include="Reportdesign\Report_f025.rdlc" />
+    <EmbeddedResource Include="Reportdesign\Rep_etiquetas.rdlc" />
+    <EmbeddedResource Include="ReportView\frmptranalisis.resx">
+      <DependentUpon>frmptranalisis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\frmrepordabiertas.resx">
+      <DependentUpon>frmrepordabiertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\BtnPosRack.resx">
+      <DependentUpon>BtnPosRack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\btnubicarenrack.resx">
+      <DependentUpon>btnubicarenrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\Buttonubic.resx">
+      <DependentUpon>Buttonubic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\ItemAnalisis.resx">
+      <DependentUpon>ItemAnalisis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\PBubicH.resx">
+      <DependentUpon>PBubicH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\PBubicV.resx">
+      <DependentUpon>PBubicV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\PosRackRefrigerado.resx">
+      <DependentUpon>PosRackRefrigerado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\rackpasillo.resx">
+      <DependentUpon>rackpasillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\UserControl_RackPasilloHorizontal.resx">
+      <DependentUpon>UserControl_RackPasilloHorizontal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\vistaubicacionesreservadas.resx">
+      <DependentUpon>vistaubicacionesreservadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmadministracionclientes.resx">
+      <DependentUpon>frmadministracionclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmadministracioncosechasygranos.resx">
+      <DependentUpon>frmadministracioncosechasygranos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmadministraciondepositos.resx">
+      <DependentUpon>frmadministraciondepositos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmadministracionusuarios.resx">
+      <DependentUpon>frmadministracionusuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmhijodeposito.resx">
+      <DependentUpon>frmhijodeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmhijoetiquetaubicaciones.resx">
+      <DependentUpon>frmhijoetiquetaubicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmhijolistaubicacionesreservadas.resx">
+      <DependentUpon>frmhijolistaubicacionesreservadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmhijoubicacionesdeposito.resx">
+      <DependentUpon>frmhijoubicacionesdeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmiperfil.resx">
+      <DependentUpon>frmiperfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmmodificapassword.resx">
+      <DependentUpon>frmmodificapassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Administracion\frmptretiquetasubicaciones.resx">
+      <DependentUpon>frmptretiquetasubicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Menues\frmBienvenida.resx">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Menues\frmlogo.resx">
+      <DependentUpon>frmlogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Menues\frmMenuapp.resx">
+      <DependentUpon>frmMenuapp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Menues\frmMenuConfiguracionapp.resx">
+      <DependentUpon>frmMenuConfiguracionapp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Menues\frmSubmenuAdministracion.resx">
+      <DependentUpon>frmSubmenuAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Menues\frmSubmenuOperaciones.resx">
+      <DependentUpon>frmSubmenuOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Menues\frmSubmenuReportes.resx">
+      <DependentUpon>frmSubmenuReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmadministrarordenesabiertas.resx">
+      <DependentUpon>frmadministrarordenesabiertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmanalisisorden.resx">
+      <DependentUpon>frmanalisisorden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmasignarubicacion.resx">
+      <DependentUpon>frmasignarubicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmasignarubicaciones.resx">
+      <DependentUpon>frmasignarubicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmasociarlotes.resx">
+      <DependentUpon>frmasociarlotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmconsultarordenes.resx">
+      <DependentUpon>frmconsultarordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmdepcrudo.resx">
+      <DependentUpon>frmdepcrudo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmdepingrefrigerado.resx">
+      <DependentUpon>frmdepingrefrigerado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmdeprefrigerado.resx">
+      <DependentUpon>frmdeprefrigerado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmorden.resx">
+      <DependentUpon>frmorden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmordendeproduccion.resx">
+      <DependentUpon>frmordendeproduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmordendespachodevolucion.resx">
+      <DependentUpon>frmordendespachodevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmordenrecepcion.resx">
+      <DependentUpon>frmordenrecepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmprocesarproductosasociados.resx">
+      <DependentUpon>frmprocesarproductosasociados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmproductosorden.resx">
+      <DependentUpon>frmproductosorden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmptretiquetasproductos.resx">
+      <DependentUpon>frmptretiquetasproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmptrf020.resx">
+      <DependentUpon>frmptrf020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmptrf025.resx">
+      <DependentUpon>frmptrf025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Ordenes\frmptrorden.resx">
+      <DependentUpon>frmptrorden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmconsultaubicacion.resx">
+      <DependentUpon>frmconsultaubicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmconsultaubicacionrack.resx">
+      <DependentUpon>frmconsultaubicacionrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmRepdespachos.resx">
+      <DependentUpon>frmRepdespachos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmReprecepcion.resx">
+      <DependentUpon>frmReprecepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmReprocesado.resx">
+      <DependentUpon>frmReprocesado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmReproduccion.resx">
+      <DependentUpon>frmReproduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmRepStatusDep.resx">
+      <DependentUpon>frmRepStatusDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmRepOcupacion.resx">
+      <DependentUpon>frmRepOcupacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmRepStock.resx">
+      <DependentUpon>frmRepStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\Reportes\frmRepStockClientes.resx">
+      <DependentUpon>frmRepStockClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatosomnitec.resx">
+      <DependentUpon>frmconfiguraraccesobasededatosomnitec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatospulse.resx">
+      <DependentUpon>frmconfiguraraccesobasededatospulse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmconfigurarservidorweb.resx">
+      <DependentUpon>frmconfigurarservidorweb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmusuarioadministradorapp.resx">
+      <DependentUpon>frmusuarioadministradorapp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entidades.E_Dashboard.datasource" />
+    <None Include="Properties\DataSources\Modelo.ProductosOrden.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reportdesign\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reportdesign\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportdesign\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\img confirmar.png" />
+    <None Include="Resources\Normal.png" />
+    <None Include="Resources\Minimize.png" />
+    <None Include="Resources\maximize3.png" />
+    <None Include="img\logo_pafsa_20.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\menu2.png" />
+    <None Include="Resources\icono-cliente.png" />
+    <None Include="Resources\arrowup.png" />
+    <None Include="Resources\arrowdown.png" />
+    <None Include="Resources\administracion.png" />
+    <None Include="Resources\operaciones.png" />
+    <None Include="Resources\reportes.png" />
+    <None Include="Resources\user.png" />
+    <None Include="img\logo.jpg" />
+    <Content Include="logo_pafsa.ico" />
+    <None Include="Resources\base-de-datos.png" />
+    <None Include="Resources\cerrar-sesion.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\grano.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\ordenes de recepcion.png" />
+    <None Include="Resources\ordenes de devolucion.png" />
+    <None Include="Resources\ordenes de produccion.png" />
+    <None Include="Resources\ordenes de reproceso.png" />
+    <None Include="Resources\ordenes de despacho.png" />
+    <None Include="Resources\linea de produccion.png" />
+    <None Include="Resources\002-warehouse.png" />
+    <None Include="Resources\laboratorio.png" />
+    <None Include="Resources\listado de ordenes.png" />
+    <None Include="Resources\impresora-qr.png" />
+    <None Include="Resources\impresora.png" />
+    <None Include="Resources\busqueda.png" />
+    <None Include="Resources\editardoc.png" />
+    <None Include="Resources\forklift.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\anular.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{bb39aea7-4312-4f5c-8002-77490e4e62b1}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{c0bec6e9-bfd6-48ae-977e-e1349b698b02}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
