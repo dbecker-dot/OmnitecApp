@@ -34,6 +34,10 @@ namespace Omnitecapp.ViewApp.Menues
             this.PanelMenu = new Guna.UI.WinForms.GunaGradient2Panel();
             this.panelcontenedorppal = new System.Windows.Forms.Panel();
             this.PanelContenedorForm = new Guna.UI.WinForms.GunaGradient2Panel();
+            this.btnconfigprintetiquetas = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnimportarubicaciones = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnimportarcuitpais = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnimportarclientes = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnserverweb = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btncerrarsesion = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnMenu = new Guna.UI.WinForms.GunaPictureBox();
@@ -69,13 +73,17 @@ namespace Omnitecapp.ViewApp.Menues
             this.PanelBarraTitulo.GradientColor2 = System.Drawing.Color.Silver;
             this.PanelBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.PanelBarraTitulo.Name = "PanelBarraTitulo";
-            this.PanelBarraTitulo.Size = new System.Drawing.Size(971, 35);
+            this.PanelBarraTitulo.Size = new System.Drawing.Size(1215, 35);
             this.PanelBarraTitulo.TabIndex = 1;
             this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
             // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.Transparent;
+            this.PanelMenu.Controls.Add(this.btnconfigprintetiquetas);
+            this.PanelMenu.Controls.Add(this.btnimportarubicaciones);
+            this.PanelMenu.Controls.Add(this.btnimportarcuitpais);
+            this.PanelMenu.Controls.Add(this.btnimportarclientes);
             this.PanelMenu.Controls.Add(this.btnserverweb);
             this.PanelMenu.Controls.Add(this.btncerrarsesion);
             this.PanelMenu.Controls.Add(this.btnMenu);
@@ -97,7 +105,7 @@ namespace Omnitecapp.ViewApp.Menues
             this.panelcontenedorppal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontenedorppal.Location = new System.Drawing.Point(0, 35);
             this.panelcontenedorppal.Name = "panelcontenedorppal";
-            this.panelcontenedorppal.Size = new System.Drawing.Size(971, 619);
+            this.panelcontenedorppal.Size = new System.Drawing.Size(1215, 619);
             this.panelcontenedorppal.TabIndex = 17;
             // 
             // PanelContenedorForm
@@ -108,8 +116,136 @@ namespace Omnitecapp.ViewApp.Menues
             this.PanelContenedorForm.GradientColor2 = System.Drawing.Color.White;
             this.PanelContenedorForm.Location = new System.Drawing.Point(342, 0);
             this.PanelContenedorForm.Name = "PanelContenedorForm";
-            this.PanelContenedorForm.Size = new System.Drawing.Size(629, 619);
+            this.PanelContenedorForm.Size = new System.Drawing.Size(873, 619);
             this.PanelContenedorForm.TabIndex = 17;
+            // 
+            // btnconfigprintetiquetas
+            // 
+            this.btnconfigprintetiquetas.AnimationHoverSpeed = 0.07F;
+            this.btnconfigprintetiquetas.AnimationSpeed = 0.03F;
+            this.btnconfigprintetiquetas.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnconfigprintetiquetas.BorderColor = System.Drawing.Color.Black;
+            this.btnconfigprintetiquetas.BorderSize = 3;
+            this.btnconfigprintetiquetas.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnconfigprintetiquetas.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnconfigprintetiquetas.CheckedForeColor = System.Drawing.Color.White;
+            this.btnconfigprintetiquetas.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnconfigprintetiquetas.CheckedImage")));
+            this.btnconfigprintetiquetas.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnconfigprintetiquetas.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnconfigprintetiquetas.FocusedColor = System.Drawing.Color.Empty;
+            this.btnconfigprintetiquetas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnconfigprintetiquetas.ForeColor = System.Drawing.Color.White;
+            this.btnconfigprintetiquetas.Image = global::Omnitecapp.Properties.Resources.impresora_qr;
+            this.btnconfigprintetiquetas.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnconfigprintetiquetas.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnconfigprintetiquetas.Location = new System.Drawing.Point(3, 474);
+            this.btnconfigprintetiquetas.Name = "btnconfigprintetiquetas";
+            this.btnconfigprintetiquetas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnconfigprintetiquetas.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnconfigprintetiquetas.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnconfigprintetiquetas.OnHoverImage = null;
+            this.btnconfigprintetiquetas.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnconfigprintetiquetas.OnPressedColor = System.Drawing.Color.Black;
+            this.btnconfigprintetiquetas.Size = new System.Drawing.Size(339, 42);
+            this.btnconfigprintetiquetas.TabIndex = 20;
+            this.btnconfigprintetiquetas.Text = "CONFIG IMPRESION ETIQUETAS";
+            this.btnconfigprintetiquetas.Click += new System.EventHandler(this.btnconfigprintetiquetas_Click);
+            // 
+            // btnimportarubicaciones
+            // 
+            this.btnimportarubicaciones.AnimationHoverSpeed = 0.07F;
+            this.btnimportarubicaciones.AnimationSpeed = 0.03F;
+            this.btnimportarubicaciones.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnimportarubicaciones.BorderColor = System.Drawing.Color.Black;
+            this.btnimportarubicaciones.BorderSize = 3;
+            this.btnimportarubicaciones.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnimportarubicaciones.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnimportarubicaciones.CheckedForeColor = System.Drawing.Color.White;
+            this.btnimportarubicaciones.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnimportarubicaciones.CheckedImage")));
+            this.btnimportarubicaciones.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnimportarubicaciones.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnimportarubicaciones.FocusedColor = System.Drawing.Color.Empty;
+            this.btnimportarubicaciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnimportarubicaciones.ForeColor = System.Drawing.Color.White;
+            this.btnimportarubicaciones.Image = global::Omnitecapp.Properties.Resources.excel;
+            this.btnimportarubicaciones.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnimportarubicaciones.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnimportarubicaciones.Location = new System.Drawing.Point(3, 414);
+            this.btnimportarubicaciones.Name = "btnimportarubicaciones";
+            this.btnimportarubicaciones.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnimportarubicaciones.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnimportarubicaciones.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnimportarubicaciones.OnHoverImage = null;
+            this.btnimportarubicaciones.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnimportarubicaciones.OnPressedColor = System.Drawing.Color.Black;
+            this.btnimportarubicaciones.Size = new System.Drawing.Size(339, 42);
+            this.btnimportarubicaciones.TabIndex = 19;
+            this.btnimportarubicaciones.Text = "IMPORTAR UBICACIONES";
+            this.btnimportarubicaciones.Click += new System.EventHandler(this.btnimportarubicaciones_Click);
+            // 
+            // btnimportarcuitpais
+            // 
+            this.btnimportarcuitpais.AnimationHoverSpeed = 0.07F;
+            this.btnimportarcuitpais.AnimationSpeed = 0.03F;
+            this.btnimportarcuitpais.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnimportarcuitpais.BorderColor = System.Drawing.Color.Black;
+            this.btnimportarcuitpais.BorderSize = 3;
+            this.btnimportarcuitpais.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnimportarcuitpais.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnimportarcuitpais.CheckedForeColor = System.Drawing.Color.White;
+            this.btnimportarcuitpais.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnimportarcuitpais.CheckedImage")));
+            this.btnimportarcuitpais.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnimportarcuitpais.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnimportarcuitpais.FocusedColor = System.Drawing.Color.Empty;
+            this.btnimportarcuitpais.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnimportarcuitpais.ForeColor = System.Drawing.Color.White;
+            this.btnimportarcuitpais.Image = global::Omnitecapp.Properties.Resources.excel;
+            this.btnimportarcuitpais.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnimportarcuitpais.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnimportarcuitpais.Location = new System.Drawing.Point(3, 348);
+            this.btnimportarcuitpais.Name = "btnimportarcuitpais";
+            this.btnimportarcuitpais.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnimportarcuitpais.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnimportarcuitpais.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnimportarcuitpais.OnHoverImage = null;
+            this.btnimportarcuitpais.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnimportarcuitpais.OnPressedColor = System.Drawing.Color.Black;
+            this.btnimportarcuitpais.Size = new System.Drawing.Size(339, 42);
+            this.btnimportarcuitpais.TabIndex = 18;
+            this.btnimportarcuitpais.Text = "IMPORTAR CUIT AFIP";
+            this.btnimportarcuitpais.Click += new System.EventHandler(this.btnimportarcuitpais_Click);
+            // 
+            // btnimportarclientes
+            // 
+            this.btnimportarclientes.AnimationHoverSpeed = 0.07F;
+            this.btnimportarclientes.AnimationSpeed = 0.03F;
+            this.btnimportarclientes.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnimportarclientes.BorderColor = System.Drawing.Color.Black;
+            this.btnimportarclientes.BorderSize = 3;
+            this.btnimportarclientes.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnimportarclientes.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnimportarclientes.CheckedForeColor = System.Drawing.Color.White;
+            this.btnimportarclientes.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnimportarclientes.CheckedImage")));
+            this.btnimportarclientes.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnimportarclientes.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnimportarclientes.FocusedColor = System.Drawing.Color.Empty;
+            this.btnimportarclientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnimportarclientes.ForeColor = System.Drawing.Color.White;
+            this.btnimportarclientes.Image = global::Omnitecapp.Properties.Resources.excel;
+            this.btnimportarclientes.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnimportarclientes.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnimportarclientes.Location = new System.Drawing.Point(2, 288);
+            this.btnimportarclientes.Name = "btnimportarclientes";
+            this.btnimportarclientes.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnimportarclientes.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnimportarclientes.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnimportarclientes.OnHoverImage = null;
+            this.btnimportarclientes.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnimportarclientes.OnPressedColor = System.Drawing.Color.Black;
+            this.btnimportarclientes.Size = new System.Drawing.Size(339, 42);
+            this.btnimportarclientes.TabIndex = 17;
+            this.btnimportarclientes.Text = "IMPORTAR CLIENTES";
+            this.btnimportarclientes.Click += new System.EventHandler(this.btnimportarclientes_Click);
             // 
             // btnserverweb
             // 
@@ -303,7 +439,7 @@ namespace Omnitecapp.ViewApp.Menues
             this.btnMinimizar.BaseColor = System.Drawing.Color.White;
             this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimizar.Image = global::Omnitecapp.Properties.Resources.Minimize;
-            this.btnMinimizar.Location = new System.Drawing.Point(847, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1091, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(31, 35);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -317,7 +453,7 @@ namespace Omnitecapp.ViewApp.Menues
             this.btnMaximizar.BaseColor = System.Drawing.Color.White;
             this.btnMaximizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximizar.Image = global::Omnitecapp.Properties.Resources.maximize3;
-            this.btnMaximizar.Location = new System.Drawing.Point(878, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(1122, 0);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(31, 35);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -331,7 +467,7 @@ namespace Omnitecapp.ViewApp.Menues
             this.btnNormal.BaseColor = System.Drawing.Color.White;
             this.btnNormal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnNormal.Image = global::Omnitecapp.Properties.Resources.Normal;
-            this.btnNormal.Location = new System.Drawing.Point(909, 0);
+            this.btnNormal.Location = new System.Drawing.Point(1153, 0);
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(31, 35);
             this.btnNormal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -346,7 +482,7 @@ namespace Omnitecapp.ViewApp.Menues
             this.btncerrar.BaseColor = System.Drawing.Color.White;
             this.btncerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btncerrar.Image = global::Omnitecapp.Properties.Resources.Close;
-            this.btncerrar.Location = new System.Drawing.Point(940, 0);
+            this.btncerrar.Location = new System.Drawing.Point(1184, 0);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(31, 35);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -358,7 +494,7 @@ namespace Omnitecapp.ViewApp.Menues
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 654);
+            this.ClientSize = new System.Drawing.Size(1215, 654);
             this.Controls.Add(this.panelcontenedorppal);
             this.Controls.Add(this.PanelBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -396,5 +532,9 @@ namespace Omnitecapp.ViewApp.Menues
         private System.Windows.Forms.Panel panelcontenedorppal;
         private Guna.UI.WinForms.GunaGradient2Panel PanelContenedorForm;
         private Guna.UI.WinForms.GunaAdvenceButton btnserverweb;
+        private Guna.UI.WinForms.GunaAdvenceButton btnimportarclientes;
+        private Guna.UI.WinForms.GunaAdvenceButton btnimportarubicaciones;
+        private Guna.UI.WinForms.GunaAdvenceButton btnimportarcuitpais;
+        private Guna.UI.WinForms.GunaAdvenceButton btnconfigprintetiquetas;
     }
 }

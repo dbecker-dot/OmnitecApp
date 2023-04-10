@@ -197,7 +197,7 @@ namespace Modelo
                     E_Ordenes.Nroref = orden.CheckNumeradorLoteOrden();
                 } else
                 {
-                    E_Ordenes.Nroref = orden.CheckNumeradorLoteOrden() + 1;
+                    E_Ordenes.Nroref = orden.CheckNumeradorLoteOrden();
                 }
                 if (E_Ordenes.Nroref < 10) 
                 {
@@ -217,7 +217,8 @@ namespace Modelo
                         E_Ordenes.Lote = E_Ordenes.Cosecha.ToString() + E_Ordenes.Codgrano + E_Ordenes.Nro + prod.CheckCodigotipoproductoxidtipoproducto() + cli.CheckCodigoclientexidcliente();
                         break;
                     case 2:
-                        E_Ordenes.Lote = E_Ordenes.Cosecha.ToString() + "00" + E_Ordenes.Nro + "PR" + cli.CheckCodigoclientexidcliente();
+                        //E_Ordenes.Lote = E_Ordenes.Cosecha.ToString() + "00" + E_Ordenes.Nro + "PR" + cli.CheckCodigoclientexidcliente();
+                        E_Ordenes.Lote = E_Ordenes.Cosecha.ToString() + E_Ordenes.Codgrano + E_Ordenes.Nro + "PR" + cli.CheckCodigoclientexidcliente();
                         break;
                     case 3:
                         E_Ordenes.Lote = "";
@@ -505,6 +506,34 @@ namespace Modelo
         public void ModificarMuestraOrden()
         {
             orden.ModificarMuestra();
+        }
+
+        // vinculacion con pulse
+
+        public DataTable ListaTolva_Entero()
+        {
+            return orden.ListaNovedadesTolva_Entero();
+        }
+
+        public int CantEtiquetasNoImpresas()
+        {
+            return orden.CantEtiquetasNoImpresas();
+        }
+
+        public DataTable ListaEtiquetasNoImpresas()
+        {
+            return orden.ListaEtiquetasnoImpresas();
+        }
+
+        public void MarcarEtiquetaImpresa()
+        {
+            orden.MarcarEtiquetaImpresa();
+            E_Ordenes.IDetalleProducto = 0;
+        }
+
+        public void insertatestrigger()
+        {
+            orden.Insertartestrigger();
         }
     }
 }

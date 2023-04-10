@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Omnitecapp.ViewApp.ViewsConfigApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -156,6 +157,34 @@ namespace Omnitecapp.ViewApp.Menues
             AbrirFormEnPanel(frm);
         }
 
+        private void btnimportarclientes_Click(object sender, EventArgs e)
+        {
+            ViewsConfigApp.frmimportarclientes frm = new ViewsConfigApp.frmimportarclientes();
+            //frm.FormClosed += new FormClosedEventHandler();
+            AbrirFormEnPanel(frm);
+        }
+
+        private void btnimportarcuitpais_Click(object sender, EventArgs e)
+        {
+            ViewsConfigApp.frmimportarcuitafip frm = new ViewsConfigApp.frmimportarcuitafip();
+            //frm.FormClosed += new FormClosedEventHandler();
+            AbrirFormEnPanel(frm);
+        }
+
+        private void btnimportarubicaciones_Click(object sender, EventArgs e)
+        {
+            ViewsConfigApp.frmimportarubicaciones frm = new ViewsConfigApp.frmimportarubicaciones();
+            //frm.FormClosed += new FormClosedEventHandler();
+            AbrirFormEnPanel(frm);
+        }
+
+        private void btnconfigprintetiquetas_Click(object sender, EventArgs e)
+        {
+            ViewsConfigApp.frmconfigprintetiquetas frm = new ViewsConfigApp.frmconfigprintetiquetas();
+            //frm.FormClosed += new FormClosedEventHandler();
+            AbrirFormEnPanel(frm);
+        }
+
         private void btncerrar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -172,9 +201,11 @@ namespace Omnitecapp.ViewApp.Menues
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
+            fh.ControlBox= false;
             fh.Dock = DockStyle.Fill;
             this.PanelContenedorForm.Controls.Add(fh);
             this.PanelContenedorForm.Tag = fh;
+            PanelMenu.Width = 55;
             fh.Show();
         }
 

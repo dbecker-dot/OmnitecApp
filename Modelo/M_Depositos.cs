@@ -154,6 +154,18 @@ namespace Modelo
             }
         }
 
+        public int CheckUbicacionxCodigo()
+        {
+            return dep.ExisteUbicacion();
+
+        }
+
+        public bool InsertarUbicacion()
+        {
+            return dep.AgregarUbicacion();
+
+        }
+
         public void Insertareserva()
         {
             if (E_Deposito.Ideposito != 3)

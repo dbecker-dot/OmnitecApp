@@ -403,7 +403,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.rbtipogranoindustria.FillColor = System.Drawing.Color.White;
             this.rbtipogranoindustria.Location = new System.Drawing.Point(3, 103);
             this.rbtipogranoindustria.Name = "rbtipogranoindustria";
-            this.rbtipogranoindustria.Size = new System.Drawing.Size(91, 20);
+            this.rbtipogranoindustria.Size = new System.Drawing.Size(105, 20);
             this.rbtipogranoindustria.TabIndex = 2;
             this.rbtipogranoindustria.Text = "INDUSTRIA";
             this.rbtipogranoindustria.CheckedChanged += new System.EventHandler(this.rbtipogranoindustria_CheckedChanged);
@@ -416,7 +416,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.rbtipogranorechazoseleccion.FillColor = System.Drawing.Color.White;
             this.rbtipogranorechazoseleccion.Location = new System.Drawing.Point(3, 71);
             this.rbtipogranorechazoseleccion.Name = "rbtipogranorechazoseleccion";
-            this.rbtipogranorechazoseleccion.Size = new System.Drawing.Size(154, 20);
+            this.rbtipogranorechazoseleccion.Size = new System.Drawing.Size(181, 20);
             this.rbtipogranorechazoseleccion.TabIndex = 1;
             this.rbtipogranorechazoseleccion.Text = "RECHAZO SELECCION";
             this.rbtipogranorechazoseleccion.CheckedChanged += new System.EventHandler(this.rbtipogranorechazoseleccion_CheckedChanged);

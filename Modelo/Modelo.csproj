@@ -63,6 +63,7 @@
     <Compile Include="Extras\WinTheme.cs" />
     <Compile Include="M_Cliente.cs" />
     <Compile Include="M_Conexion.cs" />
+    <Compile Include="M_Configprinteretiquetas.cs" />
     <Compile Include="M_Dashboard.cs" />
     <Compile Include="M_Depositos.cs" />
     <Compile Include="M_Ordenes.cs" />

@@ -49,6 +49,7 @@ namespace Entidades
         public static int IdUsuario { get; set; }
         public static double IDetalleProducto { get; set; }
         public static DateTime Fechaingstk { get; set; }
+        public static DateTime Fechaelab { get; set; }
         public static DateTime Fechaegrestk { get; set; }
         public static double IDestadoprod { get; set; }
         public static int NroBulto  { get; set; }

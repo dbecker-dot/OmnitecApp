@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Omnitecapp</RootNamespace>
     <AssemblyName>OmnitecApp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <PublishUrl>publish\</PublishUrl>
@@ -73,6 +73,18 @@
     </Reference>
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -506,6 +518,12 @@
     <Compile Include="ViewApp\Reportes\frmRepStockClientes.Designer.cs">
       <DependentUpon>frmRepStockClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfigprintetiquetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmconfigprintetiquetas.Designer.cs">
+      <DependentUpon>frmconfigprintetiquetas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatosomnitec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -523,6 +541,24 @@
     </Compile>
     <Compile Include="ViewApp\ViewsConfigApp\frmconfigurarservidorweb.Designer.cs">
       <DependentUpon>frmconfigurarservidorweb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmimportarclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmimportarclientes.Designer.cs">
+      <DependentUpon>frmimportarclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmimportarcuitafip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmimportarcuitafip.Designer.cs">
+      <DependentUpon>frmimportarcuitafip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmimportarubicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewApp\ViewsConfigApp\frmimportarubicaciones.Designer.cs">
+      <DependentUpon>frmimportarubicaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewApp\ViewsConfigApp\frmusuarioadministradorapp.cs">
       <SubType>Form</SubType>
@@ -729,6 +765,9 @@
     <EmbeddedResource Include="ViewApp\Reportes\frmRepStockClientes.resx">
       <DependentUpon>frmRepStockClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmconfigprintetiquetas.resx">
+      <DependentUpon>frmconfigprintetiquetas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmconfiguraraccesobasededatosomnitec.resx">
       <DependentUpon>frmconfiguraraccesobasededatosomnitec.cs</DependentUpon>
     </EmbeddedResource>
@@ -737,6 +776,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmconfigurarservidorweb.resx">
       <DependentUpon>frmconfigurarservidorweb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmimportarclientes.resx">
+      <DependentUpon>frmimportarclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmimportarcuitafip.resx">
+      <DependentUpon>frmimportarcuitafip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmimportarubicaciones.resx">
+      <DependentUpon>frmimportarubicaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewApp\ViewsConfigApp\frmusuarioadministradorapp.resx">
       <DependentUpon>frmusuarioadministradorapp.cs</DependentUpon>
@@ -781,6 +829,7 @@
     <None Include="Resources\arrowdown.png" />
     <None Include="Resources\administracion.png" />
     <None Include="Resources\operaciones.png" />
+    <None Include="Resources\PlantillaClientes.xlsx" />
     <None Include="Resources\reportes.png" />
     <None Include="Resources\user.png" />
     <None Include="img\logo.jpg" />
@@ -806,6 +855,7 @@
     <None Include="Resources\forklift.png" />
     <None Include="Resources\cancelar.png" />
     <None Include="Resources\anular.png" />
+    <None Include="Resources\procesamiento-datos-por-lotes.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

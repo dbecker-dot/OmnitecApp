@@ -688,6 +688,75 @@ namespace Datos
             }
         }
 
+
+        public int ExisteUbicacion()
+        {
+            SqlDataReader reader;
+            int id = -1;
+            try
+            {
+                using (var connection = GetConnection())
+                { 
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = "Select idubicacion from ubicaciones where codubicacion=@codubicacion";
+                        command.CommandType = CommandType.Text;
+                        command.Parameters.AddWithValue("@codubicacion", E_Deposito.Codubicacion);
+                        reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                id= reader.GetInt32(0);
+                            }
+                        }
+                        else
+                        {
+                            id= 0;
+                        }
+
+                    }
+                    return id;
+                }
+            }
+            catch (Exception ex)
+            {
+                return id;
+            }
+        }
+
+        public bool AgregarUbicacion()
+        {
+            try
+            {
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = "proc_insertar_ubicacion";
+                        command.Parameters.AddWithValue("@ideposito", E_Deposito.Ideposito);
+                        command.Parameters.AddWithValue("@bloque", E_Deposito.Bloque);
+                        command.Parameters.AddWithValue("@rackpasillo", E_Deposito.RackPasillo);
+                        command.Parameters.AddWithValue("@pos", E_Deposito.Pos);
+                        command.Parameters.AddWithValue("@alt", E_Deposito.Alt);
+                        command.Parameters.AddWithValue("@capacidad", E_Deposito.Capacidad);
+                        command.Parameters.AddWithValue("@codubicacion", E_Deposito.Codubicacion);
+                        command.CommandType = CommandType.StoredProcedure;
+                        SqlDataReader reader = command.ExecuteReader();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public void AgregarReservaUbicacion()
         {
             try

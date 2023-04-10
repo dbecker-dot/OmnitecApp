@@ -34,6 +34,11 @@ namespace Modelo
             return cli.Checkidclientexcliente();
         }
 
+        public int CheckclientexCodCliente()
+        {
+            return cli.Checkclientexcodigocliente();
+        }
+
         public string CheckcodclientexIdcliente()
         {
             return cli.CheckCodigoclientexidcliente ();
@@ -42,6 +47,26 @@ namespace Modelo
         public DataTable comboclientesordenesactivas()
         {
             return cli.ComboClientesordenesactivas();
+        }
+
+        public string ExistePais()
+        {
+            return cli.ExistePais();
+        }
+
+        public string ExisteCliente()
+        {
+            return cli.ExisteCliente();
+        }
+
+        public bool Insertarpais()
+        {
+            return cli.InsertarPaisAfip();
+        }
+
+        public bool Insertarcliente()
+        {
+            return cli.InsertarCliente();
         }
     }
 }

@@ -28,13 +28,13 @@ namespace Datos
                     {
                         while (reader.Read())
                         {
-                            UserLoginCache.Idusuario = reader.GetInt32(11);
-                            UserLoginCache.Nombre = reader.GetString(0);
-                            UserLoginCache.Usuario = reader.GetString(1);
-                            UserLoginCache.Email = reader.GetString(4);
-                            UserLoginCache.Perfil = reader.GetString(5);
-                            UserLoginCache.Diasexpclave = reader.GetInt32(6);
-                            UserLoginCache.IdPerfil = reader.GetInt32(12);
+                            UserLoginCache.Idusuario = reader.GetInt32(0);
+                            UserLoginCache.Nombre = reader.GetString(1);
+                            UserLoginCache.Usuario = reader.GetString(2);
+                            UserLoginCache.Email = reader.GetString(5);
+                            UserLoginCache.Perfil = reader.GetString(6);
+                            UserLoginCache.Diasexpclave = reader.GetInt32(7);
+                            //UserLoginCache.IdPerfil = reader.GetInt32(12);
                         }
                         return true;
                     }

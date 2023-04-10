@@ -39,6 +39,8 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.btnguardarcambiosorden = new Guna.UI.WinForms.GunaButton();
             this.btnanulareabreorden = new Guna.UI.WinForms.GunaButton();
             this.panelcontenedor = new Guna.UI.WinForms.GunaGradientPanel();
+            this.lblgrano = new Guna.UI.WinForms.GunaLabel();
+            this.lblcosecha = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.dgvordenparasoc = new System.Windows.Forms.DataGridView();
             this.asociar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -63,8 +65,6 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.panelsuperior = new Guna.UI.WinForms.GunaGradientPanel();
             this.lbltituloform = new System.Windows.Forms.Label();
-            this.lblcosecha = new Guna.UI.WinForms.GunaLabel();
-            this.lblgrano = new Guna.UI.WinForms.GunaLabel();
             this.panelpie.SuspendLayout();
             this.panelcontenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvordenparasoc)).BeginInit();
@@ -190,18 +190,39 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.panelcontenedor.Controls.Add(this.gunaLabel2);
             this.panelcontenedor.Controls.Add(this.lblfecha);
             this.panelcontenedor.Controls.Add(this.gunaLabel1);
-            this.panelcontenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelcontenedor.GradientColor1 = System.Drawing.Color.Silver;
             this.panelcontenedor.GradientColor2 = System.Drawing.Color.White;
             this.panelcontenedor.GradientColor3 = System.Drawing.Color.White;
             this.panelcontenedor.GradientColor4 = System.Drawing.Color.White;
-            this.panelcontenedor.Location = new System.Drawing.Point(0, 29);
+            this.panelcontenedor.Location = new System.Drawing.Point(0, 66);
             this.panelcontenedor.Name = "panelcontenedor";
             this.panelcontenedor.Padding = new System.Windows.Forms.Padding(1);
-            this.panelcontenedor.Size = new System.Drawing.Size(898, 546);
+            this.panelcontenedor.Size = new System.Drawing.Size(898, 452);
             this.panelcontenedor.TabIndex = 13;
             this.panelcontenedor.Text = "gunaGradientPanel1";
+            // 
+            // lblgrano
+            // 
+            this.lblgrano.BackColor = System.Drawing.SystemColors.Window;
+            this.lblgrano.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblgrano.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblgrano.Location = new System.Drawing.Point(724, 119);
+            this.lblgrano.Name = "lblgrano";
+            this.lblgrano.Size = new System.Drawing.Size(97, 26);
+            this.lblgrano.TabIndex = 141;
+            this.lblgrano.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblcosecha
+            // 
+            this.lblcosecha.BackColor = System.Drawing.SystemColors.Window;
+            this.lblcosecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblcosecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblcosecha.Location = new System.Drawing.Point(724, 81);
+            this.lblcosecha.Name = "lblcosecha";
+            this.lblcosecha.Size = new System.Drawing.Size(97, 26);
+            this.lblcosecha.TabIndex = 140;
+            this.lblcosecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaLabel4
             // 
@@ -209,7 +230,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.gunaLabel4.Location = new System.Drawing.Point(6, 177);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(191, 23);
+            this.gunaLabel4.Size = new System.Drawing.Size(272, 23);
             this.gunaLabel4.TabIndex = 139;
             this.gunaLabel4.Text = "ASOCIAR LOTES";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,7 +281,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvordenparasoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvordenparasoc.Size = new System.Drawing.Size(880, 174);
+            this.dgvordenparasoc.Size = new System.Drawing.Size(880, 120);
             this.dgvordenparasoc.TabIndex = 138;
             this.dgvordenparasoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvordenparasoc_CellClick);
             // 
@@ -279,7 +300,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.txtobservacionesaltaorden.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtobservacionesaltaorden.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtobservacionesaltaorden.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtobservacionesaltaorden.Location = new System.Drawing.Point(4, 422);
+            this.txtobservacionesaltaorden.Location = new System.Drawing.Point(4, 364);
             this.txtobservacionesaltaorden.Name = "txtobservacionesaltaorden";
             this.txtobservacionesaltaorden.PasswordChar = '\0';
             this.txtobservacionesaltaorden.SelectedText = "";
@@ -291,7 +312,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.gunaLabel13.BackColor = System.Drawing.SystemColors.Window;
             this.gunaLabel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.gunaLabel13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel13.Location = new System.Drawing.Point(4, 396);
+            this.gunaLabel13.Location = new System.Drawing.Point(6, 338);
             this.gunaLabel13.Name = "gunaLabel13";
             this.gunaLabel13.Size = new System.Drawing.Size(178, 23);
             this.gunaLabel13.TabIndex = 132;
@@ -546,12 +567,11 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.panelsuperior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelsuperior.BackgroundImage")));
             this.panelsuperior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelsuperior.Controls.Add(this.lbltituloform);
-            this.panelsuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelsuperior.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelsuperior.GradientColor2 = System.Drawing.Color.Gray;
             this.panelsuperior.GradientColor3 = System.Drawing.Color.Silver;
             this.panelsuperior.GradientColor4 = System.Drawing.Color.White;
-            this.panelsuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelsuperior.Location = new System.Drawing.Point(4, 69);
             this.panelsuperior.Name = "panelsuperior";
             this.panelsuperior.Size = new System.Drawing.Size(898, 29);
             this.panelsuperior.TabIndex = 12;
@@ -569,28 +589,6 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.lbltituloform.TabIndex = 28;
             this.lbltituloform.Text = "MI PERFIL";
             this.lbltituloform.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblcosecha
-            // 
-            this.lblcosecha.BackColor = System.Drawing.SystemColors.Window;
-            this.lblcosecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblcosecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblcosecha.Location = new System.Drawing.Point(724, 81);
-            this.lblcosecha.Name = "lblcosecha";
-            this.lblcosecha.Size = new System.Drawing.Size(97, 26);
-            this.lblcosecha.TabIndex = 140;
-            this.lblcosecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblgrano
-            // 
-            this.lblgrano.BackColor = System.Drawing.SystemColors.Window;
-            this.lblgrano.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblgrano.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblgrano.Location = new System.Drawing.Point(724, 119);
-            this.lblgrano.Name = "lblgrano";
-            this.lblgrano.Size = new System.Drawing.Size(97, 26);
-            this.lblgrano.TabIndex = 141;
-            this.lblgrano.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmordendeproduccion
             // 

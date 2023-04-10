@@ -54,6 +54,7 @@
     <Compile Include="D_Cliente.cs" />
     <Compile Include="D_ConexionBD.cs" />
     <Compile Include="D_ConexionOmnitec.cs" />
+    <Compile Include="D_Configprinter.cs" />
     <Compile Include="D_Dashboard.cs" />
     <Compile Include="D_Depositos.cs" />
     <Compile Include="D_Ordenes.cs" />

@@ -19,7 +19,7 @@ namespace Datos
 
         private void ValoresDBOmnitec()
         {
-            E_Conexion.Stringconexion = ConfigurationManager.AppSettings["CadenaBD"];
+            E_Conexion.Stringconexion = ConfigurationManager.AppSettings["CadenaBDOmnitec"];
         }
 
         protected SqlConnection GetConnection()

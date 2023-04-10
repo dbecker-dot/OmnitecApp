@@ -106,7 +106,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.panelpie.GradientColor2 = System.Drawing.Color.Gray;
             this.panelpie.GradientColor3 = System.Drawing.Color.Silver;
             this.panelpie.GradientColor4 = System.Drawing.Color.White;
-            this.panelpie.Location = new System.Drawing.Point(0, 495);
+            this.panelpie.Location = new System.Drawing.Point(0, 523);
             this.panelpie.Name = "panelpie";
             this.panelpie.Size = new System.Drawing.Size(909, 49);
             this.panelpie.TabIndex = 11;
@@ -237,16 +237,15 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.panelcontenedor.Controls.Add(this.gunaLabel2);
             this.panelcontenedor.Controls.Add(this.lblfecha);
             this.panelcontenedor.Controls.Add(this.gunaLabel1);
-            this.panelcontenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontenedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelcontenedor.GradientColor1 = System.Drawing.Color.Silver;
             this.panelcontenedor.GradientColor2 = System.Drawing.Color.White;
             this.panelcontenedor.GradientColor3 = System.Drawing.Color.White;
             this.panelcontenedor.GradientColor4 = System.Drawing.Color.White;
-            this.panelcontenedor.Location = new System.Drawing.Point(0, 29);
+            this.panelcontenedor.Location = new System.Drawing.Point(0, 64);
             this.panelcontenedor.Name = "panelcontenedor";
             this.panelcontenedor.Padding = new System.Windows.Forms.Padding(1);
-            this.panelcontenedor.Size = new System.Drawing.Size(909, 515);
+            this.panelcontenedor.Size = new System.Drawing.Size(909, 480);
             this.panelcontenedor.TabIndex = 11;
             this.panelcontenedor.Text = "gunaGradientPanel1";
             // 
@@ -971,7 +970,6 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.panelsuperior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelsuperior.BackgroundImage")));
             this.panelsuperior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelsuperior.Controls.Add(this.lbltituloform);
-            this.panelsuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelsuperior.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelsuperior.GradientColor2 = System.Drawing.Color.Gray;
             this.panelsuperior.GradientColor3 = System.Drawing.Color.Silver;
@@ -981,6 +979,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             this.panelsuperior.Size = new System.Drawing.Size(909, 29);
             this.panelsuperior.TabIndex = 10;
             this.panelsuperior.Text = "gunaGradientPanel1";
+            this.panelsuperior.Visible = false;
             // 
             // lbltituloform
             // 
@@ -1003,12 +1002,15 @@ namespace Omnitecapp.ViewApp.Ordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 544);
+            this.ClientSize = new System.Drawing.Size(909, 572);
+            this.ControlBox = false;
             this.Controls.Add(this.panelpie);
             this.Controls.Add(this.panelcontenedor);
             this.Controls.Add(this.panelsuperior);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmordenrecepcion";
             this.Text = "frmordenrecepcion";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmordenrecepcion_Load);
             this.panelpie.ResumeLayout(false);
             this.panelcontenedor.ResumeLayout(false);

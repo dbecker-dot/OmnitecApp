@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace Omnitecapp.ViewApp.Ordenes
 {
-    public partial class frmordenrecepcion : Form
+    public partial class frmordenrecepcion : MaterialSkin.Controls.MaterialForm
     {
         M_Ordenes orden = new M_Ordenes();
         M_Cliente cli = new M_Cliente();
@@ -42,6 +42,7 @@ namespace Omnitecapp.ViewApp.Ordenes
 
         private void frmordenrecepcion_Load(object sender, EventArgs e)
         {
+            
             cmbtransportista.DataSource = orden.ComboTranportista();
             cmbtransportista.DisplayMember = "transportista";
             cmbtransportista.ValueMember = "transportista";
@@ -91,6 +92,7 @@ namespace Omnitecapp.ViewApp.Ordenes
                     btnanulareabreorden.Text = "REABRIR";
                     btnanulareabreorden.BorderColor = Color.LightGreen;
                 }
+                this.Text = "ANULAR / MODIFICAR ORDEN DE RECEPCION";
                 lbltituloform.Text = "ANULAR / MODIFICAR ORDEN DE RECEPCION";
             }
             else
@@ -112,6 +114,7 @@ namespace Omnitecapp.ViewApp.Ordenes
                 E_Ordenes.IdGrano = int.Parse(cmbgrano.SelectedValue.ToString());
                 btnanulareabreorden.Visible = false;
                 Inicializavariables();
+                this.Text = "AGREGAR ORDEN DE RECEPCION";
                 lbltituloform.Text = "AGREGAR ORDEN DE RECEPCION";
                 txtordendeingreso.Text = orden.Consultarultimoromaneo().ToString();
                 txtcant.Enabled = true;

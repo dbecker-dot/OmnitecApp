@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace Omnitecapp.ViewApp.Ordenes
 {
-    public partial class frmordendeproduccion : Form
+    public partial class frmordendeproduccion :  MaterialSkin.Controls.MaterialForm
     {
         M_Ordenes orden = new M_Ordenes();
         M_Cliente cli = new M_Cliente();
@@ -71,6 +71,8 @@ namespace Omnitecapp.ViewApp.Ordenes
         {
             try
             {
+                
+                
                 if (E_Ordenes.EditOrden == true && E_Ordenes.IdOrden != 0)
                 {
                     cmbcliente.Text = E_Ordenes.Cliente;
@@ -162,7 +164,7 @@ namespace Omnitecapp.ViewApp.Ordenes
                     //armo el lote
                     E_Ordenes.IdCosecha = idcosecha;
                     E_Ordenes.Cosecha = cosecha;
-                    E_Ordenes.IdGrano = 0;
+                    E_Ordenes.IdGrano = E_Ordenes.IdGrano;
                     E_Ordenes.IdTipoProducto = 0;
                     orden.ArmarLoteOrden();
                     txtlotecliente.Text = E_Ordenes.Lote;
@@ -231,7 +233,10 @@ namespace Omnitecapp.ViewApp.Ordenes
             try
             {
                 E_Ordenes.IdCosechabus = int.Parse(cmbcosecha.SelectedValue.ToString());
+                E_Ordenes.IdCosecha = int.Parse(cmbcosecha.SelectedValue.ToString());
+                E_Ordenes.Cosecha = int.Parse(cmbcosecha.Text);
                 lblcosecha.Text = cmbcosecha.Text;
+                lbllote.Text = orden.ArmarLoteOrden();
                 Cargargrilla();
             }
             catch (Exception)
@@ -245,9 +250,16 @@ namespace Omnitecapp.ViewApp.Ordenes
         {
             try
             {
+                if (lblcosecha.Text == "")
+                {
+                    MessageBox.Show("Seleccione una Cosecha!!!","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 E_Ordenes.IdGrano = int.Parse(cmbgrano.SelectedValue.ToString());
                 idgrano = E_Ordenes.IdGrano;
+                E_Ordenes.Cosecha=int.Parse(lblcosecha.Text.ToString());
                 lblgrano.Text = cmbgrano.Text;
+                lbllote.Text = orden.ArmarLoteOrden();
                 Cargargrilla();
             }
             catch (Exception)
@@ -286,7 +298,7 @@ namespace Omnitecapp.ViewApp.Ordenes
                 E_Ordenes.Fecha = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
                 E_Ordenes.IdCosecha = idcosecha;
                 E_Ordenes.IdTipoProducto = 0;
-                E_Ordenes.IdGrano = 0;
+                //E_Ordenes.IdGrano = 0;
                 E_Ordenes.Observaciones = txtobservacionesaltaorden.Text;
                 if (checkBox_tomarlotecliente.Checked == true)
                 {
@@ -295,10 +307,12 @@ namespace Omnitecapp.ViewApp.Ordenes
                         MessageBox.Show("INDIQUE EL LOTE DEL CLIENTE!!!", "Orden de Recepcion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+                    E_Ordenes.Lote = txtlotecliente.Text;
                     E_Ordenes.IdOrden = orden.AltadeOrden();
                 }
                 else
                 {
+                    E_Ordenes.Lote = lbllote.Text;
                     E_Ordenes.IdOrden = orden.AltadeOrden();
                 }
                 

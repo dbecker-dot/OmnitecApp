@@ -15,7 +15,7 @@ using Entidades.Cache;
 
 namespace Omnitecapp
 {
-    public partial class frmlogin : Form
+    public partial class frmlogin : MaterialSkin.Controls.MaterialForm
     {
         M_Usuario user = new M_Usuario();
 
@@ -32,7 +32,7 @@ namespace Omnitecapp
 
         private void frmlogin_Load(object sender, EventArgs e)
         {
-
+            lblerror.Visible = false;
             lblversion.Text = "VERSION: " + E_Infoapp.Versionsistema + " / " + E_Infoapp.Fechaversion ;
         }
 
@@ -108,6 +108,8 @@ namespace Omnitecapp
         {
             try
             {
+                E_Usuario.Usuario = txtusuario.Text;
+                E_Usuario.Password = txtpass.Text;
                 if (txtusuario.Text == "Usuario" || txtpass.Text == "Contraseña")
                 {
                     return;
@@ -122,6 +124,7 @@ namespace Omnitecapp
                     frmadmapp.ShowDialog();
                     return;
                 }
+               
                 if (user.LoginUser() == true)
                 {
                     //si la contraseña es 12345678 solicito el cambio
@@ -146,14 +149,15 @@ namespace Omnitecapp
                 }
                 else
                 {
+                    lblerror.Visible = true;
                     MsgError("Usuario o contraseña incorrecta");
                 }
                 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                lblerror.Visible = true;
+                MsgError("Error " + ex);
             }
         }
     }

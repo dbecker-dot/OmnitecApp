@@ -521,7 +521,7 @@ namespace Datos
                     if (reader.HasRows) {
                         while (reader.Read())
                         {
-                            E_Ordenes.Nroref = reader.GetInt32(0);
+                            E_Ordenes.Nroref = reader.GetInt32(0) + 1;
                         }
                     } else
                     {
@@ -1829,5 +1829,142 @@ namespace Datos
             }
 
         }
+
+
+        // vinculacion con pulse
+
+        public DataTable ListaNovedadesTolva_Entero()
+        {
+            SqlDataReader dr;
+            DataTable dt = new DataTable();
+            using (var connection = GetConnection())
+            {
+
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM vista_vinculacionTolva_Entero";
+                    command.CommandType = CommandType.Text;
+                    dr = command.ExecuteReader();
+                    dt.Load(dr);
+                }
+            }
+            return dt;
+        }
+
+        public int CantEtiquetasNoImpresas()
+        {
+            SqlDataReader reader;
+            using (var connection = GetConnection())
+            {
+
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select cant from vista_cantetiquetasnoimpresas";
+                    command.CommandType = CommandType.Text;
+                    reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            try
+                            {
+                                return reader.GetInt32(0);
+                                
+                            }
+                            catch (Exception ex)
+                            {
+                                return 0;
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        return  0;
+                    }
+
+                }
+            }
+            return 0;
+        }
+
+        public DataTable ListaEtiquetasnoImpresas()
+        {
+            SqlDataReader dr;
+            DataTable dt = new DataTable();
+            using (var connection = GetConnection())
+            {
+
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM vista_detalleproducto where ptrauto='NO'";
+                    command.CommandType = CommandType.Text;
+                    dr = command.ExecuteReader();
+                    dt.Load(dr);
+                }
+            }
+            return dt;
+        }
+
+        public void MarcarEtiquetaImpresa()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                try
+                {
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        //Anulo la Orden
+                        command.CommandText = "update detalleproducto set ptrauto='SI' where idetalleproducto=@idetalleproducto";
+                        command.Parameters.AddWithValue("@idetalleproducto", E_Ordenes.IDetalleProducto);
+                        command.CommandType = CommandType.Text;
+                        command.ExecuteNonQuery();
+                        E_Ordenes.ErrorBD = false;
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    E_Ordenes.ErrorBD = true;
+                    string error = ex.Message;
+                }
+            }
+        }
+
+        public void Insertartestrigger()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                try
+                {
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        //Anulo la Orden
+                        command.CommandText = "insert into checktrigger (nomtrigger) values('genera_bb')";
+                        command.CommandType = CommandType.Text;
+                        command.ExecuteNonQuery();
+                        E_Ordenes.ErrorBD = false;
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    E_Ordenes.ErrorBD = true;
+                    string error = ex.Message;
+                }
+            }
+        }
+
+
     }
 }

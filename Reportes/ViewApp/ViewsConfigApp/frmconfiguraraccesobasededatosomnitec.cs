@@ -12,7 +12,7 @@ using Entidades;
 
 namespace Omnitecapp.ViewApp.ViewsConfigApp
 {
-    public partial class frmconfiguraraccesobasededatosomnitec : Form
+    public partial class frmconfiguraraccesobasededatosomnitec : MaterialSkin.Controls.MaterialForm
     {
         M_Conexion conex = new M_Conexion();
 

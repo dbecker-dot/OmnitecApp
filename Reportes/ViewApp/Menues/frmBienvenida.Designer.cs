@@ -32,7 +32,7 @@ namespace Omnitecapp.ViewApp.Menues
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBienvenida));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblversion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.circularProgressBar = new Guna.UI.WinForms.GunaCircleProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -52,17 +52,17 @@ namespace Omnitecapp.ViewApp.Menues
             this.label1.TabIndex = 1;
             this.label1.Text = "OMNITEC - GESTION DE DEPOSITOS";
             // 
-            // label2
+            // lblversion
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 235);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(664, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "VERSION 2.2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblversion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.ForeColor = System.Drawing.Color.White;
+            this.lblversion.Location = new System.Drawing.Point(0, 235);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(664, 39);
+            this.lblversion.TabIndex = 2;
+            this.lblversion.Text = "VERSION 2.2";
+            this.lblversion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1
             // 
@@ -108,7 +108,7 @@ namespace Omnitecapp.ViewApp.Menues
             this.ClientSize = new System.Drawing.Size(664, 274);
             this.Controls.Add(this.circularProgressBar);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblversion);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -124,7 +124,7 @@ namespace Omnitecapp.ViewApp.Menues
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblversion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaCircleProgressBar circularProgressBar;
         private System.Windows.Forms.Timer timer1;

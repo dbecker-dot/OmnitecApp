@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace Omnitecapp.ViewApp.Menues
             circularProgressBar.Value = 0;
             circularProgressBar.Minimum = 0;
             circularProgressBar.Maximum = 100;
+            lblversion.Text = "VERSION: " + E_Infoapp.Versionsistema;
             timer1.Start();
         }
 

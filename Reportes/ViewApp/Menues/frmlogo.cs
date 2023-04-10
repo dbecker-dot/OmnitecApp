@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,11 @@ namespace Omnitecapp.ViewApp.Menues
         public frmlogo()
         {
             InitializeComponent();
+        }
+
+        private void frmlogo_Load(object sender, EventArgs e)
+        {
+            lblversion.Text = "VERSION: " + E_Infoapp.Versionsistema;
         }
     }
 }

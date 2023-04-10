@@ -174,7 +174,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             ViewApp.Ordenes.frmordendeproduccion  frm = new ViewApp.Ordenes.frmordendeproduccion(principal);
             frm.FormClosed += new FormClosedEventHandler(principal.MostrarFormLogoAlCerrarForms);
             principal.AbrirFormEnPanel(frm);
-            frm.lbltituloform.Text = "AGREGAR ORDEN DE PRODUCCION";
+            frm.Text = "AGREGAR ORDEN DE PRODUCCION";
             E_Ordenes.IdOrden = 0;
             E_Ordenes.IdTipo = 2;
             E_Ordenes.EditOrden = false;
@@ -187,7 +187,7 @@ namespace Omnitecapp.ViewApp.Ordenes
             ViewApp.Ordenes.frmordendeproduccion frm = new ViewApp.Ordenes.frmordendeproduccion(principal);
             frm.FormClosed += new FormClosedEventHandler(principal.MostrarFormLogoAlCerrarForms);
             principal.AbrirFormEnPanel(frm);
-            frm.lbltituloform.Text = "AGREGAR ORDEN DE REPROCESO";
+            frm.Text = "AGREGAR ORDEN DE REPROCESO";
             E_Ordenes.IdOrden = 0;
             E_Ordenes.IdTipo = 5;
             E_Ordenes.EditOrden = false;
